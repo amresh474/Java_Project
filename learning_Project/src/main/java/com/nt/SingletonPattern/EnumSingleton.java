@@ -11,15 +11,21 @@ package com.nt.SingletonPattern;
 
 */
 
-public class EnumSingleton {
-	
-	INSTANCE ;
-	    
-	    public static void doSomething(){
-	        //do something
-	    }
+public enum EnumSingleton {
 
+	INSTANCE;
+	int value;
 
+	public int getValue() {
+		return value;
+	}
 
+	public void setValue(int value) {
+		this.value = value;
+	}
+
+	public static void doSomething() {
+		// do something
+	}
 
 }

@@ -23,7 +23,7 @@ public class FindDuplicateCharacterswithoutCollection {
 
 			}
 			if (count != 0) {
-				System.out.println(word.charAt(i) + "Occured " + count + "times");
+				System.out.println(word.charAt(i) + "    Occured   " + count + "times");
 			}
 
 		}

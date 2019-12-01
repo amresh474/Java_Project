@@ -13,14 +13,14 @@ public class reverse_words_in_String {
 
 	public static String reversWord(String str) {
 //		Pattern pattern = Pattern.compile("\\s");
-		String[] splitstr = str.split("\\\\s*(=>|,|\\\\s)\\\\s*");
+		String[] splitstr = str.split(" ");
 		String Result = " ";
 		int t=splitstr.length;
 		for (int i = 0; i < splitstr.length; i++) {
 			if (i == splitstr.length - 1) {
 				Result = splitstr[i]+ Result;
 			} else {
-				Result = "" + splitstr[i] + Result;
+				Result =" "+splitstr[i] + Result;
 			}
 		}
 		return Result;

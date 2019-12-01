@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ReverseArrayInPlace {
 	public static void main(String[] args) {
-		String[] str = { "amresh", "kumar", "boy", "good" };
+		String[] str = { "amresh", "kumar", "boy", "good" ,"wrgfg"};
 		reverse(str);
 		System.out.println("reverse array " + Arrays.toString(str));
 
