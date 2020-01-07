@@ -1,5 +1,6 @@
 package com.nt.learning;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -29,10 +30,17 @@ public class FindDuplicateCharacters {
 		System.out.println("========================================================");
 		for (Map.Entry<Character, Integer> entry : enterset) {
 			if (entry.getValue() > 1) {
-				System.out.println(" %S: " +entry.getKey()+"%n"+entry.getValue());
+				System.out.println(" %S: " + entry.getKey() + "%n" + entry.getValue());
 			}
 		}
-		
+		charMap.forEach((key, value) -> {
+			if (value > 1) {
+				System.out.println("%s:  " + key + "   %n   " + value);
+
+			}
+			;
+		});
+
 	}
 
 }
