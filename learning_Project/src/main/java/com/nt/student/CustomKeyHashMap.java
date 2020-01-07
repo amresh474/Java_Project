@@ -20,6 +20,7 @@ public class CustomKeyHashMap {
 		hMap.entrySet().forEach(x -> {
 			System.out.println(x.getKey().getFirstName() + "  ;  " + x.getKey().getLastName() + "  ;  " + x.getValue());
 		});
+		hMap.forEach((key,value)-> System.out.println(key.getFirstName()+" "+ key.getLastName() + "    "+ value));
 	}
 
 }

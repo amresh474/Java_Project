@@ -28,6 +28,11 @@ public class GetFirstNonRepeatingCharacterMain {
 			}
 
 		}
+//		hashMap.forEach((key, value) -> {
+//			if (value == 1) {
+//				System.out.println(key + " " + value);
+//			}
+//		});
 
 	}
 }

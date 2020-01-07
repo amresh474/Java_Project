@@ -32,6 +32,7 @@ public class FindDuplicateCharacters {
 				System.out.println(" %S: " +entry.getKey()+"%n"+entry.getValue());
 			}
 		}
+		
 	}
 
 }

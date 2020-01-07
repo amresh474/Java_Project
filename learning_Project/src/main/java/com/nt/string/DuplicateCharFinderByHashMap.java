@@ -25,6 +25,11 @@ public class DuplicateCharFinderByHashMap {
 				System.out.println(character + " is  " + hashMap.get(character));
 			}
 		}
+		hashMap.forEach((key, value) -> {
+			if (value > 2) {
+				System.out.println(key + " " + value);
+			}
+		});
 	}
 
 }

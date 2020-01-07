@@ -8,6 +8,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import com.sun.tools.javac.comp.Enter;
+
 public class StudentSortbyMaleFemaleInList {
 	public static void main(String[] args) {
 		List<Student> StudentList = Arrays.asList(new Student("Amresh", "Kumar", "Male"),
@@ -29,8 +31,8 @@ public class StudentSortbyMaleFemaleInList {
 		}
 		hashMap.put("Male", maleList);
 		hashMap.put("Female", femaleList);
-		System.out.println("Size: " + hashMap.size());
-		System.out.println("Size: " + hashMap.entrySet());
+//		System.out.println("Size: " + hashMap.size());
+//		System.out.println("Size: " + hashMap.entrySet());
 
 		for (String entry : hashMap.keySet()) {
 			List<Student> s = hashMap.get(entry);
@@ -39,6 +41,7 @@ public class StudentSortbyMaleFemaleInList {
 			ss.getGender();
 			
 		}
+		hashMap.forEach((key,value)->System.out.println(key + "  " + value));
 
 	}
 
