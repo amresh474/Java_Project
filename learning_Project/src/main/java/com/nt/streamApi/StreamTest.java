@@ -67,7 +67,8 @@ public class StreamTest {
 		/*****************************************************
 		 * Get student with exact match name "jayesh"
 		 *****************************************************/
-		Optional<Student> stud = students.stream().filter(student12 -> student12.getName().equals("Jayesh"))
+		Optional<Student> stud = students.stream()
+									     .filter(student12 -> student12.getName().equals("Jayesh"))
 				.findFirst();
 //		Optional<Student> stud = students.stream()
 		System.out.println(stud.isPresent() ? stud.get().getName() : "No student found");
@@ -78,7 +79,8 @@ public class StreamTest {
 		 * Get student with matching address "1235"
 		 *****************************************************/
 		Optional<Student> stud1 = students.stream()
-				.filter(student123 -> student123.getAddress().getZipcode().equals("1235")).findFirst();
+										  .filter(student123 -> student123.getAddress().getZipcode().equals("1235"))
+										  .findFirst();
 		System.out.println(stud.isPresent() ? stud.get().getName() : "No ZipCode found ");
 		System.out.println("----------------------------------------");
 		System.out.println();
@@ -86,8 +88,9 @@ public class StreamTest {
 		/*****************************************************
 		 * Get all student having mobile numbers 3333.
 		 *****************************************************/
-		List<Student> stud2 = students.stream().filter(student1234 -> student1234.getMobileNumbers().stream()
-				.anyMatch(x -> Objects.equals(x.getNumber(), "3333"))).collect(Collectors.toList());
+		List<Student> stud2 = students.stream()
+									  .filter(student1234 -> student1234.getMobileNumbers().stream().anyMatch(x -> Objects.equals(x.getNumber(), "3333")))
+									  .collect(Collectors.toList());
 
 		String result = stud2.stream().map(std -> std.getName()).collect(Collectors.joining(",", "[", "]"));
 //				  String result4 = stud3.stream().map(std -> std.getName()).collect(Collectors.joining(",", "[", "]"));
@@ -138,7 +141,9 @@ public class StreamTest {
 		 *****************************************************/
 		List<String> nameList = Arrays.asList("Jayesh", "Dany", "Khyati", "Hello", "Mango");
 
-		nameList.stream().map(String::toUpperCase).forEach(System.out::println);
+		nameList.stream()
+				.map(String::toUpperCase)
+				.forEach(System.out::println);
 		System.out.println("--------------------");
 		System.out.println();
 
@@ -147,7 +152,9 @@ public class StreamTest {
 		 *****************************************************/
 
 		List<String> namesList = Arrays.asList("Jayesh", "Dany", "Khyati", "Hello", "Mango");
-		namesList.stream().sorted().forEach(System.out::println);
+		namesList.stream()
+				 .sorted()
+				 .forEach(System.out::println);
 		System.out.println("--------------------");
 		System.out.println();
 

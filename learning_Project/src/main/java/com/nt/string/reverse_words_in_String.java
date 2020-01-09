@@ -1,4 +1,4 @@
-package com.nt.learning;
+package com.nt.string;
 
 import java.util.Scanner;
 import java.util.regex.Pattern;
