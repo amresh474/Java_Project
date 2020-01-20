@@ -1,6 +1,8 @@
 package com.nt.string;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class GetFirstNonRepeatingCharacterMain {
@@ -12,11 +14,9 @@ public class GetFirstNonRepeatingCharacterMain {
 	public static void getNonReaptingCharacter(String str) {
 		char[] str1 = str.toCharArray();
 		HashMap<Character, Integer> hashMap = new HashMap<Character, Integer>();
-
 		for (char c : str1) {
 			hashMap.put(c, hashMap.containsKey(c) ? hashMap.get(c) + 1 : 1);
 		}
-
 //		for (char c : str1) {
 //			if (hashMap.containsKey(c)) {
 //				hashMap.put(c, hashMap.get(c) + 1);

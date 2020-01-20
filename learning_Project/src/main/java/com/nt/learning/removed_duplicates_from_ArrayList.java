@@ -12,9 +12,17 @@ public class removed_duplicates_from_ArrayList {
 		primes.add(4547);
 		primes.add(23725734);
 		primes.add(78);
+		System.out.println(primes);
 		
-		Set<Integer> removeDublictae= new LinkedHashSet<Integer>(primes);
+		Set<Integer> removeDublictae= new LinkedHashSet<Integer>();
+		for (Integer integer : primes) {
+			if (removeDublictae.add(integer)==false) {
+				System.out.println(integer);
+			}
+		}
+		
 		primes.clear();
+//		System.out.println(removeDublictae.add(8));
 		primes.addAll(removeDublictae);
 		
 		System.out.println(primes);
