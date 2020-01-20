@@ -8,6 +8,7 @@ import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 
 public class JavaSortExample {
@@ -31,6 +32,14 @@ public class JavaSortExample {
 		System.out.println(numberlist);
 
 		// Sort a Set
+		/*
+		 * There is no direct support for sorting the sets in Java. To sort a set,
+		 * follow these steps:
+		 * 
+		 * Convert set to list. Sort list using Collections.sort() API. Convert list
+		 * back to set.
+		 */
+			
 		HashSet<Integer> Numberset = new LinkedHashSet<Integer>(Arrays.asList(numbers));
 		List<Integer> list = new ArrayList(Numberset);
 		Collections.sort(list);
@@ -38,6 +47,7 @@ public class JavaSortExample {
 		System.out.println("=====" + Numberset);
 
 		// Sort a Map by Key
+		
 		HashMap<Integer, String> map = new HashMap<Integer, String>();
 		map.put(50, "Alex");
 		map.put(20, "Charles");
@@ -52,6 +62,7 @@ public class JavaSortExample {
 		
 		
 		// Sort a Map by Value
+		
 		HashMap<Integer, String> unSortedMap = new HashMap<Integer, String>();
 		map.put(50, "Alex");
 		map.put(20, "Charles");
@@ -61,7 +72,13 @@ public class JavaSortExample {
 		map.put(10, "David");
 		LinkedHashMap<Integer,String> sortedmap=new LinkedHashMap<Integer, String>();
 		
-//		unSortedMap.entrySet().stream().sorted(arg0);
+		unSortedMap.entrySet()
+	    .stream()
+	    .sorted(Map.Entry.comparingByValue())
+	    .forEachOrdered(x -> sortedmap.put(x.getKey(), x.getValue()));
+	 
+	System.out.println(sortedmap);
+
 	}
 
 }
