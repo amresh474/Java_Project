@@ -5,6 +5,7 @@ import java.time.Month;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class SortcustomobjectsTest {
 	public static void main(String[] args) {
@@ -22,7 +23,7 @@ public class SortcustomobjectsTest {
 		 * implements. It makes the classes comparable to it’s instances.
 		 * 
 		 */
-		Collections.sort(list);
+		
 		System.out.println("Comparable..."+list);
 
 		/*
@@ -64,7 +65,7 @@ public class SortcustomobjectsTest {
 		 */
 		Collections.sort(list, Comparator
                 .comparing(Employee::getName)
-                .thenComparing(Employee::getDob)
+                .thenComparing(Employee::getDate)
                 .thenComparing(Employee::getId));
 		System.out.println("Group By Sorting ...."+list);
 	}

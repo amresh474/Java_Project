@@ -5,22 +5,17 @@ import java.time.LocalDate;
 import lombok.Data;
 
 @Data
+public class Employee {
 
-public class Employee implements Comparable<Employee> {
-	private Long id;
+	private long id;
 	private String name;
-	private LocalDate dob;
+	private LocalDate date;
 
-	public Employee(Long id, String name, LocalDate dob) {
+	public Employee(long l, String name, LocalDate date) {
 		super();
-		this.id = id;
+		this.id = l;
 		this.name = name;
-		this.dob = dob;
+		this.date = date;
 	}
-
-	 @Override
-	    public int compareTo(Employee o) {
-	        return this.getId().compareTo(o.getId());
-	    }
 
 }

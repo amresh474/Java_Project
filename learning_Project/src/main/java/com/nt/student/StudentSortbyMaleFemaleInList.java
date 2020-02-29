@@ -29,6 +29,9 @@ public class StudentSortbyMaleFemaleInList {
 				femaleList.add(student);
 			}
 		}
+		for (Student student : femaleList) {
+			
+		}
 		hashMap.put("Male", maleList);
 		hashMap.put("Female", femaleList);
 //		System.out.println("Size: " + hashMap.size());
@@ -41,7 +44,7 @@ public class StudentSortbyMaleFemaleInList {
 			ss.getGender();
 			
 		}
-		hashMap.forEach((key,value)->System.out.println(key + "  " + value));
+		hashMap.forEach((key,value)->System.out.println(key + "  " + value.get(0).getFirstName() +" "+value.get(0).getLastName()));
 
 	}
 
