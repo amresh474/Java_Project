@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: amresh
+Build-Jdk: 11.0.7
+Implementation-Title: learning_Project
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.example
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/learning_Project
+Created-By: Maven Integration for Eclipse
+

@@ -5,10 +5,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
-import com.sun.tools.javac.comp.Enter;
 
 public class StudentSortbyMaleFemaleInList {
 	public static void main(String[] args) {
@@ -30,7 +26,7 @@ public class StudentSortbyMaleFemaleInList {
 			}
 		}
 		for (Student student : femaleList) {
-			
+
 		}
 		hashMap.put("Male", maleList);
 		hashMap.put("Female", femaleList);
@@ -42,9 +38,10 @@ public class StudentSortbyMaleFemaleInList {
 			Student ss = s.get(0);
 			ss.getFirstName();
 			ss.getGender();
-			
+
 		}
-		hashMap.forEach((key,value)->System.out.println(key + "  " + value.get(0).getFirstName() +" "+value.get(0).getLastName()));
+		hashMap.forEach((key, value) -> System.out
+				.println(key + "  " + value.get(0).getFirstName() + " " + value.get(0).getLastName()));
 
 	}
 

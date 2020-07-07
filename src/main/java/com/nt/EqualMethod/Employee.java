@@ -1,4 +1,4 @@
-package hashCodeMethoed_and_equalsMethoed;
+package com.nt.EqualMethod;
 
 import lombok.Getter;
 import lombok.Setter;

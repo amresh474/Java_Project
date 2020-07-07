@@ -1,7 +1,5 @@
 package com.nt.string;
 
-import org.junit.Test;
-
 public class WordCounterTest {
 
 //	@Test
